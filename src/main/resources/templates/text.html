@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+</head>
+<style>
+
+    body {
+    background-color: rgb(158, 142, 142);
+    }
+    .hw03 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    }
+    .vd04 {
+    display: flex;
+    justify-content: center;
+    }
+    .vd05 {
+    display: flex;
+    justify-content: center;
+    }
+
+    .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+    .pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+<body>
+
+<div class="vd05">
+    <p> Текст записан в базу данных </p>
+
+</div>
+
+<div class="hw03">
+    <img src="https://i.pinimg.com/originals/99/46/78/9946783e4983b370fcb095f3521f8543.jpg">
+</div>
+
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="home">1</a>
+    <a href="info">2</a>
+    <a class="active" href="text">3</a>
+    <a href="home02">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+</div>
+</body>
+</html>

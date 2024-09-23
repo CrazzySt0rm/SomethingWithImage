@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    .ani {
+    display: flex;
+    justify-content: center;
+    }
+
+    .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+    .pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+
+</style>
+<body>
+
+<div class="ani">
+    <iframe src="//kodik.info/serial/58256/463d7aac80e502585e9f6174a2ac5ca5/720p" width="607" height="360"
+            frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *">
+    </iframe>
+
+    <iframe src="//kodik.info/serial/60687/d73bfd49db170075ee3ed3190f22803e/720p" width="607" height="360"
+            frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+</div>
+
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="home">1</a>
+    <a href="info">2</a>
+    <a href="text">3</a>
+    <a class="active" href="home02">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+</div>
+</body>
+</html>
