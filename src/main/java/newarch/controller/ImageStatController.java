@@ -4,7 +4,10 @@ import lombok.AllArgsConstructor;
 import newarch.dto.vision.VisionDTO;
 import newarch.model.ImageStat;
 import newarch.model.Vision;
+import newarch.model.random.panel.HelloActionListener;
+import newarch.model.random.panel.Learn;
 import newarch.service.ImageStatService;
+import newarch.service.PanelService;
 import newarch.service.VisionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,10 +19,12 @@ import java.io.IOException;
 @Controller
 @AllArgsConstructor
 @CrossOrigin(origins = "http://localhost:8081")
-public class ImageStatController {
+public class ImageStatController extends Learn {
 
     private final ImageStatService imageStatService;
     private final VisionService visionService;
+    private final PanelService panelService;
+
 
     @GetMapping("/")
     public String makeImageStat(@RequestParam(name = "title", required = false) String title, Model model) {
@@ -41,7 +46,7 @@ public class ImageStatController {
     }
 
 
-    @PostMapping("/image_stat/delete/{id}")
+    @DeleteMapping("/image_stat/delete/{id}")
     public String deleteImageStat(@PathVariable(value = "id") Long id) {
         imageStatService.deleteImageStat(id);
         return "redirect:/";
@@ -56,11 +61,27 @@ public class ImageStatController {
         return "info";
     }
     @GetMapping("/text")
-    public String getText() {
+    public String getTextxz() {
         return "text";
     }
     @GetMapping("/home02")
     public String getHome02() {
         return "home02";
+    }
+    @GetMapping("/noGameNoLife")
+    public String getNoGameNoLife() {
+        return "noGameNolife";
+    }
+    @GetMapping("/home06")
+    public String getHomeSixth() {
+        return "home06";
+    }
+
+    @GetMapping("/panel")
+    public void getLearn(@RequestBody Learn learn) {
+        learn.learn();
+
+
+//        return "home";
     }
 }

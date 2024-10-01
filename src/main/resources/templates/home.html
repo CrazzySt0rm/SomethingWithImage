@@ -146,6 +146,52 @@
     display: flex;
     justify-content: space-around;
     }
+    .radio {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center
+    }
+    .rndfr {
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+
+    }
+    .my-search {
+    margin-top: 10px;
+    display: flex;
+    justify-content: right;
+    }
+
+
+    .news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+  width: 200px;
+
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+.fw {
+margin-top: 20;
+display: flex;
+justify-content: center;
+}
+.fim {
+margin-top: 20;
+}
+.uplf {
+margin-top: 20;
+display: flex;
+justify-content: center;
+}
 
     .pagination a {
   color: black;
@@ -181,6 +227,37 @@
     </div>
 </div>
 
+<form name="f_search" class="f_search" method="get">
+    <input class="my-search" type="search" name="s" id="u" placeholder="Поиск..."><label class="label-search i-search icon-square bg-gray700 t-gray200 cursor-pointer" for="u"></label>
+</form>
+
+<div class="rndfr">
+    <p><iframe src="https://the-radio.ru/radio/megahit-r1295#" name="radio" width="100%" height="200"></iframe></p>
+</div>
+
+<div class="news">
+    <a href="http://ria.ru">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+    <form action="/news" method="get">
+        <button type="submit"> Новости </button>
+    </form>
+    <menu>
+        <li><button id="save">Save</button></li>
+        <li><button id="share">Share</button></li>
+    </menu>
+</div>
+
+
+<div class="uplf">
+<!--    <form method="POST" enctype="multipart/form-data"-->
+<!--          action="/upload">-->
+<!--        File to upload: <input type="file" name="file"><br /> Name: <input-->
+<!--            type="text" name="name"><br /> <br /> <input type="submit"-->
+<!--                                                     value="Upload"> Press here to upload the file!-->
+<!--    </form>-->
+</div>
+
+
+
 
 
 <div class="hw02">
@@ -188,13 +265,6 @@
         Заголовок: <input type="text" name="title"/><br><br>
         Описание: <input type="text" name="description"/><br><br>
         Фотография: <input type="file" name="file1"/><br><br>
-        <input type="submit" value="отправить">
-    </form>
-</div>
-
-<div class="hw07">
-    <form action="vision/" method="post" enctype="text/plain">
-        Токен: <input type="text" name="token1"/><br><br>
         <input type="submit" value="отправить">
     </form>
 </div>
@@ -218,29 +288,65 @@
 </div>
 
 <div class="RP-SCRIPT">
-    <a class="RP-LINK" href="https://radiopotok.ru/radio/2207">Power
-        HIT Radio (Мурманск)</a>
+
+    <iframe src="https://vk.com/video_ext.php?oid=188959623&id=456239157&hash=310caa11f5c58c1c" width="640" height="360"
+            frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+    <a href="https://yandex.ru/video/preview/4820705166921174678">
+        <button type="submit"> Лучшая на радио </button>
+    </a>
 </div>
 
+<div class="fw">
+    <form action="https://vk.com/forsakenworldroru?to=L2ZvcnNha2Vud29ybGRyb3J1Pw--">
+        <button type="submit">Forsaken World images</button>
+    </form>
+</div>
+<!--https://vk.com/forsakenworldroru?z=photo-224906341_457239060%2Falbum-224906341_00%2Frev-->
+
+
+<div class="fim">
+
+    <form action="images/fantasy elf.jpg">
+        <img src="/images/fantasy elf.jpg" width="250" height="400">
+        <button type="submit"> 1 </button>
+        <p> Нажмите здесь </p>
+    </form>
+</div>
+
+<menu>
+    <extended>
+        <title> Путешествие на Бали </title>
+    </extended>
+</menu>
 <div class="ymani">
-    <iframe src="//kodik.info/serial/27242/e6b9e3103d2d4480d165725e135d8bb4/720p" width="607" height="360"
-            frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *">
-    </iframe>
+    <summary>Info</summary>
+    <details>
+        <p>
+            Здесь могла быть ваша реклама.
+        </p>
 
-    <iframe src="//kodik.info/serial/58256/463d7aac80e502585e9f6174a2ac5ca5/720p" width="607" height="360"
-            frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *">
-    </iframe>
+        <iframe src="//kodik.info/serial/27242/e6b9e3103d2d4480d165725e135d8bb4/720p" width="607" height="360"
+                frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *">
+        </iframe>
+
+        <iframe src="//kodik.info/serial/58256/463d7aac80e502585e9f6174a2ac5ca5/720p" width="607" height="360"
+                frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *">
+        </iframe>
+
+    </details>
 </div>
+
 
 <div class="pagination">
-    <a href="#">&laquo;</a>
+    <a href="home06">&laquo;</a>
     <a class="active" href="home">1</a>
     <a href="info">2</a>
     <a href="text">3</a>
     <a href="home03">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
+    <a href="noGameNoLife">5</a>
+    <a href="home06">6</a>
+    <a href="info">&raquo;</a>
 </div>
 
 </body>
