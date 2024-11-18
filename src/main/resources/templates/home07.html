@@ -2,15 +2,187 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 </head>
 
 
 <body>
 
+<p>a css3 animation demo</p>
+
+
+<style>
+    body {
+    background: radial-gradient(circle, #0077ea, #1f4f96, #1b2949, #000);
+<!--    background-color: #8740cf;-->
+
+    }
+
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+.cubeX {
+<!--  background-color:#0040C1;-->
+
+
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cubX__title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  z-index: 1;
+}
+
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+          animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #0051f4;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+</style>
+<div class="cubX">
+    <div class="hero__title">Здесь могла быть ваша реклама</div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+</div>
+
+<style>
+    .blink {
+    margin-top: 20;
+    display: flex;
+    justify-content: center;
+    }
+
+    @-webkit-keyframes blink6 {
+ 10% { transform: scale(1, 1) rotate(80deg); }
+ 20% { transform: scale(0, 0) rotate(160deg); }
+ 100% { transform: scale(0, 0) rotate(0deg); }
+}
+@keyframes blink6 {
+ 10% { transform: scale(1, 1) rotate(80deg); }
+ 20% { transform: scale(0, 0) rotate(160deg); }
+ 100% { transform: scale(0, 0) rotate(0deg); }
+}
+#blink6 {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0 0 10px #3d7a97;
+  background: #064578;
+}
+#blink6:after, #blink6:before {
+  content: "";
+  position: absolute; top: 0; left: 0;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image:
+    radial-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 30%),
+    linear-gradient(45deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%),
+    linear-gradient(135deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%);
+  -webkit-animation: blink6 10s linear infinite;
+  animation: blink6 10s linear infinite;
+  transform: scale(0, 0) rotate(0deg);
+}
+#blink6:before {
+  top: -30%;
+  right: 0; left: auto;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+</style>
+
+<div class="blink" >
+     <div id="blink6">
+         <p>Здесь могла быть ваша реклама </p>
+     </div>
+</div>
+
+
+
 <img src="https://sun1-97.userapi.com/s/v1/ig2/YhomrQP6wxIvzwjK-RfoWVd084IoDiAelx5v2y6VjIE8XQ6ETF9jE9oW5lXLLMmP30HoVo5QNr13zaFHnMzVxF2R.jpg?
 quality=96&as=32x57,48x85,72x128,108x192,160x284,240x427,360x640,480x853,540x960,640x1138,720x1280,1080x1920&from=bu&u=PGjgzXGFs2oGIjvFZQbAS0vNjGBXWlNlx9ANN
 -Lx4VE&cs=454x807">
+
+<style>
+
+</style>
+
+
+
+
 
 </body>
 </html>

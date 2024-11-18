@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<!-- CSS стили -->
+<style>
+    .hero-block
+    {
+         z-index: 20;
+         opacity: 0;
+         position: absolute;
+         top: 235px;
+         left: 394px;
+         animation: animation-path-hero-block 20s linear infinite;
+    }
+
+    .hero {
+         display: block;
+         width: 40px;
+         height: 40px;
+         background-image: url(./images/hero.png);
+         background-position: left 0;
+         animation: animation-path-hero 1s steps(12) infinite;
+    }
+
+    @keyframes animation-path-hero-block {
+         0%{opacity:0;transform:translateZ(0)}
+         5%{opacity:1}
+         95%{opacity:1}
+         to{opacity:0;transform:translate3D(360px,180px,0)}
+    }
+
+    @keyframes animation-path-hero{
+         0%{background-position:0 top}
+         to{background-position:-480px top}
+    }
+</style>
+</head>
+
+<body>
+
+<!-- game field -->
+<div style='width:1300px; height:800px; background-color:#D0E0D0'>
+
+    <!-- background -->
+    <img src='./images/background.jpg' width='1200px'>
+
+    <!-- hero -->
+    <div class="hero-block">
+        <div class="hero"></div>
+    </div>
+</div>
+
+</body>
+
+</html>

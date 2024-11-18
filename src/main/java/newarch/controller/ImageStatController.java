@@ -76,6 +76,23 @@ public class ImageStatController extends Learn {
     public String getHomeSixth() {
         return "home06";
     }
+    @GetMapping("/home07")
+    public String getHomeSeven() {
+        return "home07";
+    }
+    @GetMapping("/home08")
+    public String getHomeEight() {
+        return "home08";
+    }
+    @GetMapping("/home09")
+    public String getHomeNibe() {
+        return "home09";
+    }
+    @GetMapping("/home_test")
+    public String getHomeTest() {
+        return "home_test";
+    }
+
 
     @GetMapping("/panel")
     public void getLearn(@RequestBody Learn learn) {
